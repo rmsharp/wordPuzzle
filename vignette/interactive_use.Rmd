@@ -1,0 +1,36 @@
+---
+title: "Interactive Use of Word Search Puzzle Maker"
+author: "R. Mark Sharp"
+date: "4/14/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+## Interactive Use
+```{r demonstrate-manual-creation}
+
+filename_1 <- "../tests/books_of_bible.txt"
+puzzle_list_1 <- make_puzzle(filename_1, upper_case = TRUE)
+print_puzzle(puzzle_list_1)
+print_words(puzzle_list_1)
+print_key(puzzle_list_1)
+
+filename_2 <- "../inst/extdata/word_lists/word_lists/ruth_1_4.txt"
+puzzle_list_2 <- make_puzzle(filename_2, upper_case = TRUE)
+print_puzzle(puzzle_list_2)
+print_words(puzzle_list_2)
+print_key(puzzle_list_2)
+
+words <- get_words("tests/books_of_bible.txt")
+text <- get_text_string("data/find the book puzzle.txt")
+found_words <- found_forward_and_backward_words(words, text)
+found_words <- found_words[order(found_words$starts_at), ]
+
+
+```
+

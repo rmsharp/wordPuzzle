@@ -1,0 +1,19 @@
+Package: wordPuzzle
+Title: Word Search Puzzles in R
+Description: Creates word puzzles using user specified words and puzzle
+    characteristics.
+Version: 0.1
+Author: R. Mark Sharp <rmsharp@me.com>
+Maintainer: R. Mark Sharp <rmsharp@me.com>
+Depends:
+    R (>= 3.2.1)
+Imports:
+    stringi,
+    plyr,
+    rmsutilityr
+Suggests:
+    testthat
+License: MIT
+LazyData: true
+RoxygenNote: 6.1.1
+Encoding: UTF-8

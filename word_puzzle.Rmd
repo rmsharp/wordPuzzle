@@ -1,0 +1,59 @@
+---
+title: "Word Puzzle"
+author: "R. Mark Sharp"
+date: "4/14/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
+
+When you click the **Knit HTML** button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+This is a hidden word puzzle maker. The user provides a text file with one or
+more words per line and the program tries to place those words into a matrix 
+of characters that whose size is specified by the configuration specified at 
+the end of the word file. The configuration sextion begin on the line after a
+line beginning with a '#' symbol. An example file structure follows:
+
+firstWord secondWord
+thirdWord short verrryyyyyy loooonnnng wwwwwoooorrrrrd
+
+#
+max_trials = 10000
+n_directions = 20
+width = 17
+height = 15
+left_right = 0.3
+right_left = 0.2
+up_down = 0.2
+down_up = 0.2
+up_right = 0.1
+up_left = 0.1
+down_right = 0.1
+down_left = 0.1
+
+The numbers associated with the directions of word formation are 
+used to determine the stochastic probability that the direction will 
+be used for the word placement. 
+
+A word placement may fail. Each word placement
+attempts to place the word in the puzzle max_trials times before the placement
+attempt is considered unsuccessful. 
+he numbers associated with the directions of word formation are  also relative 
+to each other and may be integers. Thus, a direction of formation that is
+0.3 is going to be (on average) tried three times more often than a direction
+that has a value of 0.1.
+```{r}
+source("R/word_puzzle.R")
+filename <- "tests/books_of_bible.txt"
+puzzle_list <- make_puzzle(filename, upper_case = TRUE)
+```
+
+```{r results='markup'}
+print_puzzle(puzzle_list)
+print_words(puzzle_list)
+print_key(puzzle_list)
+
+```

@@ -1,0 +1,79 @@
+afraid
+against
+asked
+before
+boy
+bull
+called
+contemptible
+downhearted
+Eli
+Elkanah
+ephod
+family
+gave
+give
+God
+good
+grief
+guilt
+Hannah
+here
+home
+Hophni
+honor
+husband
+Israel
+linen
+lips
+judge
+Lord
+may
+meat
+meeting
+now
+offering
+old
+people
+Phinehas
+place
+prayed
+praying
+priest
+robe
+sacrifice
+said
+Samuel
+servant
+Shiloh
+sin
+sons
+strength
+tent
+then
+time
+two
+visions
+vow
+weaned
+weeping
+went
+wicked
+woman
+word
+year
+you
+
+#
+max_trials = 2000
+n_directions = 20
+width = 20
+height = 20
+left_right = 1
+right_left = 1
+up_down = 1
+down_up = 1
+up_right = 0
+up_left = 0
+down_right = 1
+down_left = 0

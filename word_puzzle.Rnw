@@ -92,7 +92,8 @@ if (str_detect(Sys.info()['user'], 'msharp')) {
 }
 @
 <<load-functions>>=
-source("R/word_puzzle.R")
+library(wordPuzzle)
+
 @
 <<make-puzzle>>=
 filename <- "inst/extdata/word_lists/Numbers 22 - Balak and Balaam_2.txt"

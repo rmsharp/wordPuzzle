@@ -16,6 +16,7 @@ make_puzzle <- function (filename, upper_case = TRUE) {
     word <- words[[word_order[[w_ptr]]]]
     a_word <- case(word, upper_case)
     force_break <- FALSE
+    
     directions <- get_random_directions(word, specifications)
     for (direction in directions) {
       for (i in 1:specifications[['max_trials']]) {

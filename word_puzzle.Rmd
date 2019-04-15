@@ -8,13 +8,10 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
-
-When you click the **Knit HTML** button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-This is a hidden word puzzle maker. The user provides a text file with one or
+This RMarkdown document is a hidden word puzzle maker. The user provides a text file with one or
 more words per line and the program tries to place those words into a matrix 
 of characters that whose size is specified by the configuration specified at 
-the end of the word file. The configuration sextion begin on the line after a
+the end of the word file. The configuration section begins on the line after a
 line beginning with a '#' symbol. An example file structure follows:
 
 firstWord secondWord
@@ -46,8 +43,8 @@ to each other and may be integers. Thus, a direction of formation that is
 0.3 is going to be (on average) tried three times more often than a direction
 that has a value of 0.1.
 ```{r}
-source("R/word_puzzle.R")
-filename <- "tests/books_of_bible.txt"
+library(wordPuzzle)
+filename <- "inst/extdata/word_lists/books_of_bible.txt"
 puzzle_list <- make_puzzle(filename, upper_case = TRUE)
 ```
 

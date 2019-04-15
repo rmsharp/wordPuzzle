@@ -16,7 +16,7 @@ try_word_fit <- function(puzzle_array, word, direction, specifications) {
   trial_word_l <- get_trial_word_list(puzzle_array, word, direction, 
                                       specifications)
   word_fits <- 
-    stri_detect_fixed(word, collapse_word(trial_word_l[['trial_word_vector']], ''))
+    stri_detect_regex(word, collapse_word(trial_word_l[['trial_word_vector']], ''))
   list(word_fits = word_fits, 
        location = trial_word_l[['location']],
        offset = trial_word_l[['offset']])

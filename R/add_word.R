@@ -7,11 +7,14 @@
 #' @export
 add_word <- function(puzzle_array, word, location, offset) {
   t_location <- location
+  if (stringi::stri_length(word) <= 0)
+    stop("word of no length found.")
   word_v <- expand_word(word)
   for (i in 1:length(word_v)) {
     puzzle_array[t_location[[1]], t_location[[2]]] <- word_v[[i]]
     t_location[1] <- t_location[[1]] + offset[[1]]
     t_location[2] <- t_location[[2]] + offset[[2]]
   }
+  cat(paste0(word, "\n"))
   puzzle_array
 }

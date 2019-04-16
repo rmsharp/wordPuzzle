@@ -97,6 +97,7 @@ library(wordPuzzle)
 @
 <<make-puzzle>>=
 filename <- "inst/extdata/word_lists/Numbers 22 - Balak and Balaam_2.txt"
+filename <- "inst/extdata/word_lists/books_of_bible.txt"
 puzzle_list <- make_puzzle(filename, upper_case = TRUE)
 @
 \clearpage

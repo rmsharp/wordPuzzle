@@ -20,13 +20,13 @@ get_trial_word_list <- function(puzzle_array, word, direction,
   r_offset <- 0
   if (direction %in% c("down_up", "up_left", "up_right")) {
     r_offset <- -1
-  } else if (direction %in% c('up_down', 'down_left', 'down_right')) {
+  } else if (direction %in% c("up_down", "down_left", "down_right")) {
     r_offset <- 1
   }
   c_offset <- 0
-  if (direction %in% c('down_left', 'up_left', "right_left")) {
+  if (direction %in% c("down_left", "up_left", "right_left")) {
     c_offset <- -1
-  } else if (direction %in% c('left_right', 'up_right', 'down_right'))
+  } else if (direction %in% c("left_right", "up_right", "down_right"))
     c_offset <- 1
   len <- stri_length(word)
   trial_word_vector <- character(len)

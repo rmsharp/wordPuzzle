@@ -58,5 +58,5 @@ get_words <- function(puzzle_description_file) {
   }
   close(conn)
   words <- unlist(line_list)
-  words
+  words <- words[stri_length(words) > 0]
 }

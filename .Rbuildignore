@@ -1,2 +1,15 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^docs$
+^_pkgdown\.yml$
+^.*.MySCMServerInfo
+^.*example_wkbk.xlsx$
+.travis.yml
+.codecov.yml
+.gitignore
+^README\.Rmd$
+^README-.*\.png$
+installation.Rmd
+^docs$
+_config.yml
+^CODE_OF_CONDUCT.md$

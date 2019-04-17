@@ -1,4 +1,3 @@
-context("form_puzzle_array")
 words_1 <- get_words("test_file_1.txt")
 words_2 <- get_words("test_file_2.txt")
 specs_1 <- get_specifications("test_file_1.txt")

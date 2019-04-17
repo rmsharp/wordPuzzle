@@ -1,10 +1,13 @@
 Package: wordPuzzle
+Type: Package
 Title: Word Search Puzzles in R
 Description: Creates word puzzles using user specified words and puzzle
     characteristics.
-Version: 0.1
-Author: R. Mark Sharp <rmsharp@me.com>
-Maintainer: R. Mark Sharp <rmsharp@me.com>
+Version: 0.1.05
+Date: 2019-04-17
+Authors@R: c(
+    person("R. Mark", "Sharp", email = "rmsharp@me.com", , 
+    role = c("aut", "ctb", "cre")))
 URL: https://rmsharp.github.io/wordPuzzle/, https://github.com/rmsharp/wordPuzzle
 BugReports: https://github.com/rmsharp/wordPuzzle/issues
 DisplayMode: Showcase
@@ -26,3 +29,4 @@ License: MIT + file LICENSE
 LazyData: true
 RoxygenNote: 6.1.1
 Encoding: UTF-8
+VignetteBuilder: knitr

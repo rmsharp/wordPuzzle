@@ -1,4 +1,54 @@
-\documentclass[12pt,a4paper,article]{memoir} % for a short document
+\documentclass[12pt,a4paper,article]{memoir}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt} % for a short document
 \usepackage{amssymb,amsmath}
 \usepackage{hyperref} % URLs etc
 %\usepackage{enumitem}
@@ -41,12 +91,13 @@
 % See the ``Memoir customise'' template for some common customisations
 % Don't forget to read the Memoir manual: memman.pdf
 
-\title{Word Puzzles for 1 Samuel 1-3}
+\title{Word Puzzle for Numbers 22 Balak and Balaam}
 \subtitle{}
 \author{R. Mark Sharp}
 \date{\today}
 
 %%% BEGIN DOCUMENT
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 \maketitle
 
@@ -55,12 +106,93 @@
 
 
 
+\clearpage
+\Large
+\section*{Word Puzzle for Numbers 22 Balak and Balaam}
+\begin{verbatim}
+Y P C R E G N E S S E M R D S 
+R K A L A B V H I N N P O E C 
+G D R O W S I E S B A L A A M 
+N T M O U T H U R B D T D T M 
+A M A A L A B P E A E D I H H 
+D O N K E Y R H A O W H L O T 
+E E T H R E E R L M O Z V N N 
+H L X S V D L A W A B I A B B 
+S P O I U P D T E O N T A E A 
+U O R H E D D E G E R G M O T 
+R E L T C W A S Y O M R E R T 
+C P H A G I S A P O A W A L L 
+M O N E Y N R M T S G O D N E 
+R F I E L D I E H S I L O O F 
+H B L E S S N K J G C U R S E 
+
+\end{verbatim}
+\clearpage
+\normalsize
+\begin{verbatim}
 
 
+Word key with Row and Column positions of the first letter:
+   1: Balak          - [  2,  0]      25: sword          - [  3,  0]
+   2: Balaam         - [  5,  0]      26: battle         - [  8,  0]
+   3: Jericho        - [ 15,  0]      27: road           - [  1,  0]
+   4: Isreal         - [  2,  0]      28: field          - [ 14,  0]
+   5: am             - [  9,  0]      29: hit            - [  2,  0]
+   6: Balaam         - [  3,  0]      30: narrow         - [ 13,  0]
+   7: Moab           - [  7,  0]      31: path           - [  2,  0]
+   8: Pethor         - [  9,  0]      32: vineyard       - [  7,  0]
+   9: Beor           - [  8,  0]      33: wall           - [ 12,  0]
+  10: Nation         - [  2,  0]      34: saw            - [ 11,  0]
+  11: Euphrates      - [  3,  0]      35: crushed        - [ 12,  0]
+  12: river          - [ 10,  0]      36: lay            - [ 11,  0]
+  13: bless          - [ 15,  0]      37: mouth          - [  4,  0]
+  14: curse          - [ 15,  0]      38: hit            - [  6,  0]
+  15: messenger      - [  1,  0]      39: three          - [  7,  0]
+  16: money          - [ 13,  0]      40: foolish        - [ 14,  0]
+  17: magic          - [ 11,  0]      41: bowed          - [  8,  0]
+  18: stayed         - [  3,  0]      42: rich           - [ 13,  0]
+  19: important      - [ 14,  0]      43: God            - [ 13,  0]
+  20: Egypt          - [  9,  0]      44: people         - [ 12,  0]
+  21: saddle         - [ 12,  0]      45: death          - [  1,  0]
+  22: donkey         - [  6,  0]      46: dust           - [ 10,  0]
+  23: angry          - [  5,  0]      47: king           - [ 15,  0]
+  24: angel          - [  8,  0]
+
+\end{verbatim}
+\clearpage
+\begin{verbatim}
 
 
+Word key with Row and Column positions of the first letter:
+   1: Balak          - [  2,  6]      25: sword          - [  3,  6]
+   2: Balaam         - [  5,  7]      26: battle         - [  8, 15]
+   3: Jericho        - [ 15,  9]      27: road           - [  1, 13]
+   4: Isreal         - [  2,  9]      28: field          - [ 14,  2]
+   5: am             - [  9, 13]      29: hit            - [  2,  8]
+   6: Balaam         - [  3, 10]      30: narrow         - [ 13, 14]
+   7: Moab           - [  7, 10]      31: path           - [  2, 12]
+   8: Pethor         - [  9,  6]      32: vineyard       - [  7, 13]
+   9: Beor           - [  8, 14]      33: wall           - [ 12, 12]
+  10: Nation         - [  2, 10]      34: saw            - [ 11,  8]
+  11: Euphrates      - [  3,  8]      35: crushed        - [ 12,  1]
+  12: river          - [ 10,  3]      36: lay            - [ 11,  3]
+  13: bless          - [ 15,  2]      37: mouth          - [  4,  3]
+  14: curse          - [ 15, 11]      38: hit            - [  6, 12]
+  15: messenger      - [  1, 12]      39: three          - [  7,  3]
+  16: money          - [ 13,  1]      40: foolish        - [ 14, 15]
+  17: magic          - [ 11, 11]      41: bowed          - [  8, 11]
+  18: stayed         - [  3,  6]      42: rich           - [ 13,  7]
+  19: important      - [ 14,  7]      43: God            - [ 13, 11]
+  20: Egypt          - [  9,  9]      44: people         - [ 12,  2]
+  21: saddle         - [ 12,  7]      45: death          - [  1, 14]
+  22: donkey         - [  6,  1]      46: dust           - [ 10,  6]
+  23: angry          - [  5,  1]      47: king           - [ 15,  8]
+  24: angel          - [  8, 10]
 
+\end{verbatim}
 
+\clearpage
+The current date and time is 2019-04-17 06:38:45. The processing time for
+this document was 7 seconds.
 
-
-
+\end{document}

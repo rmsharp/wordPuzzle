@@ -13,3 +13,4 @@ installation.Rmd
 ^docs$
 _config.yml
 ^CODE_OF_CONDUCT.md$
+^.*\.pdf$

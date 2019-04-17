@@ -15,6 +15,5 @@ add_word <- function(puzzle_array, word, location, offset) {
     t_location[1] <- t_location[[1]] + offset[[1]]
     t_location[2] <- t_location[[2]] + offset[[2]]
   }
-  cat(paste0(word, "\n"))
   puzzle_array
 }

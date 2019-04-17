@@ -41,7 +41,7 @@
 % See the ``Memoir customise'' template for some common customisations
 % Don't forget to read the Memoir manual: memman.pdf
 
-\title{Word Puzzles for 1 Samuel 1-3}
+\title{Word Puzzle for Numbers 22 Balak and Balaam}
 \subtitle{}
 \author{R. Mark Sharp}
 \date{\today}
@@ -60,48 +60,32 @@ opts_chunk$set(echo = FALSE, cache = FALSE, include = FALSE, tidy = FALSE)
 @
 <<setup_timer, echo = FALSE, include = FALSE>>=
 ## should be in a "source" file
-require(stringr, quietly = TRUE)
+library(rmsutilityr)
 start_time <- proc.time()
-get_elapsed_time_str <- function (start_time) {
-  # To use: collect the start_time at the beginning of the script with 
-  # start_time <- proc.time()
-  # At the end call this function using start_time as the sole argument
-  # elapsed_time <- get_elapsed_time_str(start_time)
-  total_seconds <- (proc.time()[[3]] - start_time[[3]])
-  total_minutes <- total_seconds / 60
-  hours <- floor(total_minutes / 60)
-  minutes <- floor(total_minutes - hours * 60)
-  seconds <- round(total_seconds - (hours * 3600) - (minutes * 60), 0)
-  hours_str <- ifelse(hours > 0, str_c(hours, " hours, "), '')
-  minutes_str <- ifelse(minutes > 0, str_c(minutes, " minutes and "), '')
-  seconds_str <- str_c(seconds, " seconds.")
-  str_c(hours_str, minutes_str, seconds_str)
-}
-@
 <<load_packagesE, echo = FALSE, include = FALSE>>=
-##I use the following packages frequently. 
-require(stringr, quietly = TRUE)
-require(xtable, quietly = TRUE)
-require(testthat, quietly = TRUE)
-suppressPackageStartupMessages(require(XLConnect, quietly = TRUE))
-suppressPackageStartupMessages(require(hash, quietly = TRUE))
-if (str_detect(Sys.info()['user'], 'msharp')) {
-  source("~/Documents/Development/R/r_workspace/animal_db_lb.R")
-} else {
-  source("~/Development/Mark/R/animal_db_lb.R") 
-}
+##I use the following packages frequently.
+# require(stringr, quietly = TRUE)
+# require(xtable, quietly = TRUE)
+# require(testthat, quietly = TRUE)
+# suppressPackageStartupMessages(require(XLConnect, quietly = TRUE))
+# suppressPackageStartupMessages(require(hash, quietly = TRUE))
+# if (str_detect(Sys.info()['user'], 'msharp')) {
+#   source("~/Documents/Development/R/r_workspace/animal_db_lb.R")
+# } else {
+#   source("~/Development/Mark/R/animal_db_lb.R")
+# }
+
 @
 <<load-functions>>=
-#library(wordPuzzle)
-source("R/word_puzzle.R")
+library(wordPuzzle)
 @
 <<make-puzzle>>=
-filename <- "inst/extdata/word_lists/1Samuel_1_3.txt"
+filename <- "../inst/extdata/word_lists/Numbers_22-Balak_and_Balaam.txt"
 puzzle_list <- make_puzzle(filename, upper_case = TRUE)
 @
 \clearpage
 \Large
-\section*{Word Puzzle for 1 Samuel 1-3}
+\section*{Word Puzzle for Numbers 22 Balak and Balaam}
 \begin{verbatim}
 <<puzzle, include = TRUE, results = 'asis'>>=
 print_puzzle(puzzle_list)

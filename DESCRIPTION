@@ -5,6 +5,9 @@ Description: Creates word puzzles using user specified words and puzzle
 Version: 0.1
 Author: R. Mark Sharp <rmsharp@me.com>
 Maintainer: R. Mark Sharp <rmsharp@me.com>
+URL: https://rmsharp.github.io/wordPuzzle/, https://github.com/rmsharp/wordPuzzle
+BugReports: https://github.com/rmsharp/wordPuzzle/issues
+DisplayMode: Showcase
 Depends:
     R (>= 3.2.1)
 Imports:
@@ -12,9 +15,14 @@ Imports:
     plyr,
     rmsutilityr
 Suggests:
+    covr,
+    dplyr,
+    knitr,
+    pkgdown,
+    roxygen2 (>= 6.0.0),
     testthat
 Remotes: github::rmsharp/rmsutilityr
-License: MIT
+License: MIT + file LICENSE
 LazyData: true
 RoxygenNote: 6.1.1
 Encoding: UTF-8

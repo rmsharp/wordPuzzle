@@ -43,6 +43,28 @@ test_that("case() performs as expected", {
   expect_false(case("AbcD") == "AbcD")
   expect_true(case("AbcD", FALSE) == "AbcD")
 })
+test_that(
+  stri_c("get_random_directions() returns the correct psuedorandom ",
+         "list of directions"), {
+           set.seed(1)
+           directions <- get_random_directions(words_1[1], specs_1)
+           expect_equal(directions, 
+                        c("up_down", "up_down", "down_up", "up_right", 
+                          "left_right", "up_right", "down_left", "down_up",
+                          "down_up", "left_right", "left_right", 
+                          "left_right", "down_up", "up_down", "down_right", 
+                          "right_left", "up_left", "down_left", "up_down",
+                          "down_right"))
+           set.seed(1)
+           directions <- get_random_directions("ThisIsALongWord", specs_1)
+           expect_equal(directions, 
+                        c("up_down", "up_down", "down_up", "up_right", 
+                          "left_right", "up_right", "down_left", "down_up", 
+                          "down_up", "left_right", "left_right", "left_right",
+                          "down_up", "up_down", "down_right", "right_left", 
+                          "up_left", "down_left", "up_down", "down_right"))
+         })
+test_that
 test_that("filter_out_bad_directions() returns a vector of usable directions", {
   specifications <- 
     c(max_trials = 1000,

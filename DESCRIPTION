@@ -13,6 +13,7 @@ Imports:
     rmsutilityr
 Suggests:
     testthat
+Remotes: github::rmsharp/rmsutilityr
 License: MIT
 LazyData: true
 RoxygenNote: 6.1.1

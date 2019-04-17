@@ -69,8 +69,8 @@ Revelation
 title = Books of the Bible
 max_trials = 2000
 n_directions = 20
-width = 25
-height = 25
+width = 20
+height = 20
 left_right = 0.3
 right_left = 0.2
 up_down = 0.2

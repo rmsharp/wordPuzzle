@@ -59,24 +59,9 @@ opts_chunk$set(keep.source=TRUE, eps = FALSE)
 opts_chunk$set(echo = FALSE, cache = FALSE, include = FALSE, tidy = FALSE)
 @
 <<setup_timer, echo = FALSE, include = FALSE>>=
-## should be in a "source" file
-require(stringr, quietly = TRUE)
+library(rmsutilityr)
+#library(stringr, quietly = TRUE)
 start_time <- proc.time()
-get_elapsed_time_str <- function (start_time) {
-  # To use: collect the start_time at the beginning of the script with 
-  # start_time <- proc.time()
-  # At the end call this function using start_time as the sole argument
-  # elapsed_time <- get_elapsed_time_str(start_time)
-  total_seconds <- (proc.time()[[3]] - start_time[[3]])
-  total_minutes <- total_seconds / 60
-  hours <- floor(total_minutes / 60)
-  minutes <- floor(total_minutes - hours * 60)
-  seconds <- round(total_seconds - (hours * 3600) - (minutes * 60), 0)
-  hours_str <- ifelse(hours > 0, str_c(hours, " hours, "), '')
-  minutes_str <- ifelse(minutes > 0, str_c(minutes, " minutes and "), '')
-  seconds_str <- str_c(seconds, " seconds.")
-  str_c(hours_str, minutes_str, seconds_str)
-}
 @
 <<load_packagesE, echo = FALSE, include = FALSE>>=
 ##I use the following packages frequently. 
@@ -85,11 +70,11 @@ require(xtable, quietly = TRUE)
 require(testthat, quietly = TRUE)
 suppressPackageStartupMessages(require(XLConnect, quietly = TRUE))
 suppressPackageStartupMessages(require(hash, quietly = TRUE))
-if (str_detect(Sys.info()['user'], 'msharp')) {
-  source("~/Documents/Development/R/r_workspace/animal_db_lb.R")
-} else {
-  source("~/Development/Mark/R/animal_db_lb.R") 
-}
+#if (str_detect(Sys.info()['user'], 'msharp')) {
+#  source("~/Documents/Development/R/r_workspace/animal_db_lb.R")
+#} else {
+#  source("~/Development/Mark/R/animal_db_lb.R") 
+#}
 @
 <<load-functions>>=
 library(wordPuzzle)

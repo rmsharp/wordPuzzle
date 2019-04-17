@@ -1,43 +1,7 @@
-library(testthat, quietly = TRUE)
-library(wordPuzzle, quietly = TRUE)
-context("word_puzzle")
+context("form_puzzle_array")
 words_1 <- get_words("test_file_1.txt")
 words_2 <- get_words("test_file_2.txt")
-test_that("get_words() tokenizes puzzle description file", {
-  expect_equal(length(words_1), 25)
-  expect_equal(length(words_2), 7)
-})
-test_that("get_words() returns the correct words", {
-  expect_equal(words_1[[25]], "25")
-  expect_equal(words_1[[22]], "twenty_two")
-})
-test_that("get_word_order() returns the correct word order", {
-  expect_equal(get_word_order(c("word1", "word22", "word333")), c(3, 2, 1))
-  expect_equal(get_word_order(words_1), 
-               c(23L, 24L, 21L, 22L, 17L, 18L, 15L, 14L, 19L, 13L, 16L, 20L, 
-                 11L, 12L, 8L, 7L, 3L, 5L, 4L, 9L, 1L, 6L, 10L, 2L, 25L))
-})
 specs_1 <- get_specifications("test_file_1.txt")
-test_that("get_specifications() returns the correct specifications", {
-  expect_equal(specs_1[["title"]], "Test file 1")
-  expect_equal(specs_1[["n_directions"]], 20)
-  expect_equal(specs_1[["width"]], 25)
-  expect_equal(specs_1[["height"]], 15)
-  expect_equal(specs_1[["left_right"]], 0.3)
-  expect_equal(specs_1[["right_left"]], 0.2)
-  expect_equal(specs_1[["up_down"]], 0.2)
-  expect_equal(specs_1[["down_up"]], 0.2)
-  expect_equal(specs_1[["up_right"]], 0.1)
-  expect_equal(specs_1[["up_left"]], 0.1)
-  expect_equal(specs_1[["down_right"]], 0.1)
-  expect_equal(specs_1[["down_left"]], 0.1)
-})
-test_that("form_puzzle_array creates the right object", {
-  puzzle_array <- form_puzzle_array(specs_1)
-  expect_equal(nrow(puzzle_array), 15)
-  expect_equal(ncol(puzzle_array), 25)
-  expect_true(all(puzzle_array == "."))
-})
 test_that("case() performs as expected", {
   expect_true(case("AbcD", TRUE) == "ABCD")
   expect_false(case("AbcD") == "AbcD")

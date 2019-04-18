@@ -5,3 +5,7 @@
 *.log
 *.gz
 *.tex
+vignette/*\.tex$
+^\.vignette/*\.pdf$
+^\.vignette/*\.log$
+vignette/Balak\_and\_Balaam_puzzle\.tex$

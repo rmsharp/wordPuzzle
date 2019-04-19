@@ -24,8 +24,8 @@ find_words <- function (words, text, found_words) {
                   n_word = n_word,
                   original_word = original_word,
                   starts_at = stri_locate_all_fixed(text, word)[[i]][1]))
-        print(stri_c(n_word, ". ", original_word, ": starts at ", 
-                    stri_locate_all_fixed(text, word)[[i]][1]))
+        #print(stri_c(n_word, ". ", original_word, ": starts at ", 
+        #            stri_locate_all_fixed(text, word)[[i]][1]))
         n_word <- n_word + 1
         
       }

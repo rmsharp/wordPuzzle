@@ -41,7 +41,7 @@
 % See the ``Memoir customise'' template for some common customisations
 % Don't forget to read the Memoir manual: memman.pdf
 
-\title{Word Puzzle for Numbers 22 Balak and Balaam}
+\title{Word Puzzle for Matthew 26-28}
 \subtitle{}
 \author{R. Mark Sharp}
 \date{\today}
@@ -80,12 +80,12 @@ start_time <- proc.time()
 library(wordPuzzle)
 @
 <<make-puzzle>>=
-filename <- "../inst/extdata/word_lists/Numbers_22-Balak_and_Balaam.txt"
+filename <- "../inst/extdata/word_lists/JesusKilled.txt"
 puzzle_list <- make_puzzle(filename, upper_case = TRUE)
 @
 \clearpage
 \Large
-\section*{Word Puzzle for Numbers 22 Balak and Balaam}
+\section*{Word Puzzle for Matthew 26-28}
 \begin{verbatim}
 <<puzzle, include = TRUE, results = 'asis'>>=
 print_puzzle(puzzle_list)

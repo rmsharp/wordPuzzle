@@ -2,10 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
-*.log
-*.gz
-*.tex
-vignette/*\.tex$
-^\.vignette/*\.pdf$
-^\.vignette/*\.log$
-vignette/Balak\_and\_Balaam_puzzle\.tex$
+**.log
+**.gz
+**.tex
+vignette/*.tex$
+^.vignette/*.pdf$
+^.vignette/*.log$
+vignette/Balak_and_Balaam_puzzle.tex$
